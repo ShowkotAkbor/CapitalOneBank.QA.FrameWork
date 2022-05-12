@@ -10,7 +10,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.log4testng.Logger;
 
-public class ExcellReader {
+/*public class ExcellReader {
 	Workbook workbook;
 	org.apache.poi.ss.usermodel.Sheet sheet;
 
@@ -60,3 +60,4 @@ public class ExcellReader {
 		return data;
 }
 	}
+*/

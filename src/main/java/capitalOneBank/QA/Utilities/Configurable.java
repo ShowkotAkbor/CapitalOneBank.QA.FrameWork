@@ -7,6 +7,8 @@ import java.util.Properties;
 
 import org.testng.Assert;
 
+import capitalOneBank.QA.Reporting.Java_Logger;
+
 
 
 public class Configurable {
@@ -18,8 +20,8 @@ public class Configurable {
 	private int explicitWait;
 	private int pageLoadWait;
 	private int elementImplicitWait;
-	private String excelPath;
-	private int sheetNum;
+	//private String excelPath;
+	//private int sheetNum;
 
 	private Configurable() {
 	}
@@ -56,4 +58,5 @@ public class Configurable {
 			e.printStackTrace();
 			Java_Logger.getLog("File Not Found");
 		}
-}
+	}
+	}
