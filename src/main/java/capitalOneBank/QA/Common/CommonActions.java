@@ -18,6 +18,7 @@ import capitalOneBank.QA.Base.BaseClass;
 
 // open accoount needs to be click.
 public class CommonActions {
+	private static final String text = null;
 	WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(10));
 	JavascriptExecutor jsExecutor = (JavascriptExecutor)BaseClass.driver;
 	
@@ -45,7 +46,7 @@ public class CommonActions {
 		}
 	}
 	
-	public void inputText(WebElement element, char text) {
+	public void inputText(WebElement element) {
 		try {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			element.sendKeys(String.valueOf(text));

@@ -1,10 +1,10 @@
 package capitalOneBank.QA.Common;
 
 //import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.testng.Assert;
 
-import capitalOneBank.QA.Base.BaseClass;
+//import capitalOneBank.QA.Base.BaseClass;
 
 //public class CommonWaits {
 	/*public void waitUntilClickable(WebElement element) {

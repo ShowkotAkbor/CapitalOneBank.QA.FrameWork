@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	public static WebDriver driver;
 	protected LetsGetStarted letsGetStartedPage;
-	protected CommonActions commonActions;
+	public static CommonActions commonActions;
 	protected OpenAccont openAccountPage;
 	protected PersonalInfo personalInfoPage;
 
@@ -24,7 +24,7 @@ public class BaseClass {
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get("https://www.progressive.com/");
+		driver.get("https://www.capitalone.com/bank/checking-accounts/online-checking-account");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
