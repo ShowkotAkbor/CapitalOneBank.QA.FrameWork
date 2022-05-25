@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="RegressionTest(failed)">
+    <classes>
+      <class name="capitalOne.Qa.Test.OpenAccount.OpenAccountTest">
+        <methods>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="afterEachTestMethod"/>
+          <include name="setUp"/>
+          <include name="openAccountShareer"/>
+          <include name="reportingInitiating"/>
+          <include name="cleaningUp"/>
+        </methods>
+      </class> <!-- capitalOne.Qa.Test.OpenAccount.OpenAccountTest -->
+    </classes>
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -5,8 +5,12 @@
     <classes>
       <class name="capitalOne.Qa.Test.OpenAccount.OpenAccountTest">
         <methods>
-          <include name="letsGetStarted"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="afterEachTestMethod"/>
           <include name="setUp"/>
+          <include name="openAccountShowkot"/>
+          <include name="reportingInitiating"/>
           <include name="cleaningUp"/>
         </methods>
       </class> <!-- capitalOne.Qa.Test.OpenAccount.OpenAccountTest -->

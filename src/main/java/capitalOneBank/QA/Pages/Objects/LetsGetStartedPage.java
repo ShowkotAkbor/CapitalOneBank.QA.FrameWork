@@ -7,27 +7,22 @@ import org.openqa.selenium.support.PageFactory;
 
 import capitalOneBank.QA.Common.CommonActions;
 
-public class LetsGetStarted {
-	private static final boolean status = false;
+public class LetsGetStartedPage {
 
-	public LetsGetStarted(WebDriver driver) {
+	public LetsGetStartedPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(id = "existing_customer")
-	private WebElement existingCustomerYElement;
+	protected WebElement existingCustomerYElement;
 	@FindBy(id = "new_customer")
-	private WebElement newCustomerNElement;
+	protected WebElement newCustomerNElement;
 	@FindBy(id = "expectations-continue")
-	private WebElement continueElement;
+	protected WebElement continueElement;
 
-	
-	public void clickAlreadyHaveCustomerAcountStep(capitalOneBank.QA.Common.CommonActions commonActions,
-			boolean isExistingCustomer) {
-		// boolean status = commonActions.isSelected(existingCustomerYElement);
-		if (status && isExistingCustomer) {
-			// commonActions.click(existingCustomerYElement);
-		} else if (status && !isExistingCustomer) {
+	public void clickAlreadyHaveCustomerAcountStep(CommonActions commonActions, boolean isAlreadyCustomer) {
+		boolean status = commonActions.isSelected(newCustomerNElement);
+		if (!status && !isAlreadyCustomer) {
 			commonActions.click(newCustomerNElement);
 		} else {
 			commonActions.logEventAndFail("Existing customer is not in selected status");

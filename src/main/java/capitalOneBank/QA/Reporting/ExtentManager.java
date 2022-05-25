@@ -1,36 +1,38 @@
 package capitalOneBank.QA.Reporting;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import org.testng.Reporter;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentManager {
 
-	private static ExtentReports extent;
+private static ExtentReports extent;
 	
 	public synchronized static ExtentReports getInstance() {
 		if(extent == null) {
 			try {
-				Date date = new Date();
-				DateFormat dateFormat = new SimpleDateFormat("MM.dd.yyyy_HH.mm");
-				String dateString = dateFormat.format(date);
-				
 				extent = new ExtentReports();
-				ExtentSparkReporter sparkReporter = new ExtentSparkReporter("./test-output/ExtentReports/ExtentReport_"+dateString+".html");
-				sparkReporter.config().setReportName("QA Automation for Progressive");
-				extent.attachReporter(sparkReporter);
-				extent.setSystemInfo("QA Team", "Avengers_Progressive");
+				ExtentSparkReporter spark = new ExtentSparkReporter("./test-output/Spark.html");
+				spark.config().setReportName("Progressive Automation");
+				extent.attachReporter(spark);
+				extent.setSystemInfo("Team", "QE Avengers");
 				extent.setSystemInfo("Environment", "QA");
-				extent.setSystemInfo("Assigned Tester", System.getProperty("user.name"));
-				Java_Logger.getLog("Reporting is starting ...");
-			}catch(Exception e) {
+				extent.setSystemInfo("OS", System.getProperty("os.name"));
+				System.out.println("Reporting Started...");
+			} catch (Exception e) {
 				e.printStackTrace();
-				Java_Logger.getLog("Reporting cannot started. \n" + e.getLocalizedMessage());
 			}
 		}
 		return extent;
 	}
+
+	public static Reporter getTest() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+	
 }
